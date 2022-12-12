@@ -1,0 +1,73 @@
+{
+    "version": 1,
+    "key": "auth",
+    "data": {
+        "users": [
+            {
+                "id": "4d19e1a5b4a14dcf937fd7b8ee86e8ee",
+                "group_ids": [
+                    "system-admin"
+                ],
+                "is_owner": true,
+                "is_active": true,
+                "name": "saranpong",
+                "system_generated": false
+            }
+        ],
+        "groups": [
+            {
+                "id": "system-admin",
+                "name": "Administrators"
+            },
+            {
+                "id": "system-users",
+                "name": "Users"
+            },
+            {
+                "id": "system-read-only",
+                "name": "Read Only"
+            }
+        ],
+        "credentials": [
+            {
+                "id": "fac088eb2c774f15879ee51b6f2056a5",
+                "user_id": "4d19e1a5b4a14dcf937fd7b8ee86e8ee",
+                "auth_provider_type": "homeassistant",
+                "auth_provider_id": null,
+                "data": {
+                    "username": "saranpong"
+                }
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "id": "b7fdc4031223474ea6f7af6f9d884773",
+                "user_id": "4d19e1a5b4a14dcf937fd7b8ee86e8ee",
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "client_icon": null,
+                "token_type": "normal",
+                "created_at": "2022-10-05T07:32:33.609153+00:00",
+                "access_token_expiration": 1800.0,
+                "token": "495826e113d597088db85ad38922634b4c0e9ec1d97605e9d064aa0b10f7474dc0acaf569763dd5fcf0824df3ed0638e39a0ce4b6b25f811cae662c0ef2113da",
+                "jwt_key": "b8586859e344b7ea51e6d9892bd2b438ad613e4ad2786889d903c25e7320679049d31197abae7e79a685fcc52ddb8404cc7cc4de8b6406c03c4039944dd54f8b",
+                "last_used_at": "2022-10-05T07:32:33.609314+00:00",
+                "last_used_ip": "172.19.0.1"
+            },
+            {
+                "id": "67f8ee6d4b6c4076a4e6358dd7c49988",
+                "user_id": "4d19e1a5b4a14dcf937fd7b8ee86e8ee",
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "client_icon": null,
+                "token_type": "normal",
+                "created_at": "2022-10-05T07:33:39.028510+00:00",
+                "access_token_expiration": 1800.0,
+                "token": "4debce6402ce09e76d40383b10c9c9f908f8900ce85122b37d5c27d76ab2f79f197c840ba70fc0ad6a8211854bb3a6ee090dba99be9f936e2fa963c0191b37fe",
+                "jwt_key": "83778a6cf0daf4e51c95e4a936332b5f17731026e98d5659710751a02493930f6ca5ec0cc1bd032599b205bbcc2323bb5249f6b7f8d81a56bdf463713a7dce7f",
+                "last_used_at": "2022-10-05T07:33:39.028620+00:00",
+                "last_used_ip": "172.19.0.1"
+            }
+        ]
+    }
+}

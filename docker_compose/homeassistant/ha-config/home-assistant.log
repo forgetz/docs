@@ -1,0 +1,15 @@
+2022-10-28 10:17:02 ERROR (MainThread) [homeassistant.config_entries] Error setting up entry SpeedTest for speedtestdotnet
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 231, in async_setup
+    result = await component.async_setup_entry(hass, self)  # type: ignore
+  File "/usr/src/homeassistant/homeassistant/components/speedtestdotnet/__init__.py", line 76, in async_setup_entry
+    await coordinator.async_setup()
+  File "/usr/src/homeassistant/homeassistant/components/speedtestdotnet/__init__.py", line 194, in async_setup
+    self.api = await self.hass.async_add_executor_job(speedtest.Speedtest)
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.8/site-packages/speedtest.py", line 1091, in __init__
+    self.get_config()
+  File "/usr/local/lib/python3.8/site-packages/speedtest.py", line 1173, in get_config
+    ignore_servers = list(
+ValueError: invalid literal for int() with base 10: ''

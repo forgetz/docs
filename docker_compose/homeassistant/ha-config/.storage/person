@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "key": "person",
+    "data": {
+        "items": [
+            {
+                "name": "saranpong",
+                "user_id": "4d19e1a5b4a14dcf937fd7b8ee86e8ee",
+                "device_trackers": [],
+                "id": "saranpong"
+            }
+        ]
+    }
+}

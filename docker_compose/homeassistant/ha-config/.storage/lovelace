@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "person.saranpong"
+                        },
+                        {
+                            "entity": "sensor.home_cloud_ceiling"
+                        },
+                        {
+                            "entity": "sensor.home_realfeel_temperature"
+                        },
+                        {
+                            "entity": "sensor.home_precipitation"
+                        },
+                        {
+                            "entity": "sensor.home_pressure_tendency"
+                        },
+                        {
+                            "entity": "sensor.home_uv_index"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.home"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

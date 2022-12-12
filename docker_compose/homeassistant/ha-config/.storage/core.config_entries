@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "key": "core.config_entries",
+    "data": {
+        "entries": [
+            {
+                "entry_id": "0133fb95448011ed9308fd8ee7b9cd85",
+                "version": 1,
+                "domain": "met",
+                "title": "Home",
+                "data": {
+                    "track_home": true
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "onboarding",
+                "connection_class": "cloud_poll",
+                "unique_id": null
+            },
+            {
+                "entry_id": "0466933b448111edb75d5382d1204170",
+                "version": 1,
+                "domain": "accuweather",
+                "title": "Home",
+                "data": {
+                    "latitude": 13.722230106613376,
+                    "longitude": 100.51017165184022,
+                    "name": "Home",
+                    "api_key": "NeIFaAfvCfSuhvIdxLZtWNmeDwv98gQR"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "cloud_poll",
+                "unique_id": "318842"
+            },
+            {
+                "entry_id": "156716ee448211ed866555ca3a966386",
+                "version": 1,
+                "domain": "speedtestdotnet",
+                "title": "SpeedTest",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_poll",
+                "unique_id": null
+            }
+        ]
+    }
+}

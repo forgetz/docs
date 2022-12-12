@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "key": "core.device_registry",
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "0466933b448111edb75d5382d1204170"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "accuweather",
+                        "318842"
+                    ]
+                ],
+                "manufacturer": "AccuWeather, Inc.",
+                "model": null,
+                "name": "AccuWeather",
+                "sw_version": null,
+                "entry_type": "service",
+                "id": "04b66b8d448111ed9b5ce72bb466a5d2",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            }
+        ],
+        "deleted_devices": []
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.saranpong",
+                "state": "unknown",
+                "attributes": {
+                    "editable": true,
+                    "id": "saranpong",
+                    "user_id": "4d19e1a5b4a14dcf937fd7b8ee86e8ee",
+                    "friendly_name": "saranpong"
+                },
+                "last_changed": "2022-10-28T03:17:00.187240+00:00",
+                "last_updated": "2022-10-28T03:17:05.570177+00:00",
+                "context": {
+                    "id": "ffc2cc99566e11edaa5e976d68b1ffa4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-10-28T03:17:13.511960+00:00"
+        }
+    ]
+}

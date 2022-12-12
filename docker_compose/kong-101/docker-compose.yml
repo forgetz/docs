@@ -1,0 +1,117 @@
+version: "3.9"
+services:
+
+  #######################################
+  # Postgres database
+  #######################################
+  db:
+    image: postgres:9.6
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: kong
+      POSTGRES_DB: kong
+      POSTGRES_PASSWORD: kong
+    ports:
+      - 5432:5432
+    networks:
+      - kongnw
+
+  #######################################
+  # Internal mock backend
+  #######################################
+  web:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    expose:
+      - 8080
+      - 8081
+      - 8082
+    networks:
+      - kongnw
+
+  #######################################
+  # Kong database migration
+  #######################################
+  kong-migration:
+    image: kong:2.8.1
+    restart: on-failure
+    command: kong migrations bootstrap
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: db
+      KONG_PG_DATABASE: kong
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kong
+    depends_on:
+      - db
+    networks:
+      - kongnw
+
+  #######################################
+  # Kong: The API Gateway
+  #######################################
+  kong:
+    image: kong:2.8.1
+    restart: on-failure
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: db
+      KONG_PG_USER: kong
+      KONG_PG_PASSWORD: kong
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001, 0.0.0.0:8444 ssl
+    healthcheck:
+      test: ["CMD", "kong", "health"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+      - 8443:8443
+      - 8001:8001
+      - 8444:8444
+    networks:
+      - kongnw
+
+  #######################################
+  # Redis
+  #######################################
+  redis:
+    image: redis:7.0.0-alpine
+    networks:
+      - kongnw
+
+  #######################################
+  # Konga database prepare
+  #######################################
+  konga-prepare:
+    image: pantsel/konga:0.14.9
+    command: "-c prepare -a postgres -u postgresql://kong:kong@db:5432/konga"
+    networks:
+      - kongnw
+    restart: on-failure
+    depends_on:
+      - db
+
+  #######################################
+  # Konga database prepare
+  #######################################
+  ui:
+    image: pantsel/konga:0.14.9
+    environment:
+      DB_ADAPTER: postgres
+      DB_URI: postgresql://kong:kong@db:5432/konga
+      NODE_ENV: production
+    ports:
+      - 1337:1337
+    networks:
+      - kongnw
+    restart: always
+    depends_on:
+      - db
+
+networks:
+  kongnw: {}
