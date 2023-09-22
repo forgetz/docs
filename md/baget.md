@@ -3,7 +3,6 @@ setup own nuget server with docker
 <br/>
 https://loic-sharma.github.io/BaGet/installation/docker/
 
-<br/>
 
 # How to upload package
 
