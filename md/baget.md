@@ -12,6 +12,7 @@ https://loic-sharma.github.io/BaGet/installation/docker/
 
 3. pack nuspec to nupkg<br/>
 `dotnet pack`
+<br/>nupkg file will show up in /bin/debug folder
 
 4. upload to nuget server<br/>
 `dotnet nuget push -s http://localhost:5555/v3/index.json -k [key_ที่อยู่ในไฟล์ baget.env] [package_name].nupkg`
